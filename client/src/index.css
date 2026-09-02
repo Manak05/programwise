@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --pw-primary: #2d5bff;
+  --pw-primary-dark: #1e3fc4;
+  --pw-primary-light: #eef2ff;
+  --pw-accent: #00b894;
+  --pw-accent-light: #e6f9f4;
+  --pw-warning: #f39c12;
+  --pw-warning-light: #fef3e2;
+  --pw-danger: #dc3545;
+  --pw-danger-light: #fdecee;
+  --pw-bg: #f6f8fc;
+  --pw-surface: #ffffff;
+  --pw-text: #1f2937;
+  --pw-text-muted: #6b7280;
+  --pw-border: #e5e9f2;
+
+  --pw-radius-sm: 8px;
+  --pw-radius-md: 12px;
+  --pw-radius-pill: 999px;
+
+  --pw-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --pw-shadow-md: 0 10px 24px rgba(45, 91, 255, 0.09);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background-color: var(--pw-bg);
+  color: var(--pw-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--pw-text);
+}
+
+a { text-decoration: none; }
+
+/* ---------- Page header pattern (used on most inner pages) ---------- */
+.pw-page-header { margin-bottom: 1.75rem; }
+.pw-page-title { font-size: 1.55rem; font-weight: 700; margin-bottom: 0.25rem; }
+.pw-page-subtitle { color: var(--pw-text-muted); font-size: 0.95rem; margin-bottom: 0; }
+.pw-section-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+  color: var(--pw-text) !important;
+}
+.pw-brand-dot { color: var(--pw-accent); }
+.navbar .nav-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--pw-text);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.navbar .nav-link:hover { color: var(--pw-primary); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  border-radius: var(--pw-radius-sm);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.btn-primary {
+  background-color: var(--pw-primary);
+  border-color: var(--pw-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--pw-primary-dark);
+  border-color: var(--pw-primary-dark);
+}
+
+/* ---------- Cards ---------- */
+.pw-card {
+  border: 1px solid var(--pw-border);
+  border-radius: var(--pw-radius-md);
+  background: var(--pw-surface);
+  box-shadow: var(--pw-shadow-sm);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.pw-card:hover {
+  box-shadow: var(--pw-shadow-md);
+}
+.pw-program-card:hover { transform: translateY(-2px); }
+
+.pw-card-title { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.35rem; line-height: 1.35; }
+.pw-card-meta { color: var(--pw-text-muted); font-size: 0.85rem; }
+.pw-card-stats { font-size: 0.85rem; margin-top: 0.5rem; }
+.pw-card-stats > div { margin-bottom: 0.15rem; }
+.pw-stat-label { display: inline-block; min-width: 70px; color: var(--pw-text-muted); font-weight: 500; }
+
+/* ---------- Badges (single unified system) ---------- */
+.pw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: var(--pw-radius-pill);
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.4;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.pw-badge-category { background: var(--pw-primary-light); color: var(--pw-primary-dark); }
+.pw-badge-status-active { background: var(--pw-accent-light); color: #00875a; }
+.pw-badge-status-inactive { background: #eef0f4; color: #6b7280; }
+.pw-badge-match { font-size: 0.8rem; }
+.pw-badge-match-high { background: var(--pw-accent-light); color: #00875a; }
+.pw-badge-match-mid { background: var(--pw-warning-light); color: #b7791f; }
+.pw-badge-match-low { background: var(--pw-danger-light); color: #c0392b; }
+
+/* ---------- Filters ---------- */
+.pw-filter-bar { background: var(--pw-surface); }
+.pw-filter-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--pw-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- Forms ---------- */
+.form-label { font-weight: 600; font-size: 0.9rem; }
+.form-control, .form-select {
+  border-radius: var(--pw-radius-sm);
+  border-color: var(--pw-border);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--pw-primary);
+  box-shadow: 0 0 0 0.2rem rgba(45, 91, 255, 0.15);
+}
+
+/* ---------- Alerts ---------- */
+.alert { border-radius: var(--pw-radius-sm); border: 1px solid transparent; border-left-width: 4px; }
+
+/* ---------- Tables ---------- */
+.table thead th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--pw-text-muted);
+  background-color: var(--pw-bg);
+  border-bottom-width: 1px;
+}
+.table td, .table th { vertical-align: middle; }
+
+/* ---------- Hero (Home) ---------- */
+.pw-hero {
+  background: linear-gradient(135deg, var(--pw-primary) 0%, #6a8dff 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 3rem;
+}
+.pw-hero-title { font-size: 2.1rem; font-weight: 800; margin-bottom: 1rem; }
+.pw-hero-text { font-size: 1.05rem; opacity: 0.95; margin-bottom: 1.75rem; max-width: 560px; }
+.pw-feature-title { font-weight: 700; font-size: 1.05rem; }
+
+.pw-step { display: flex; align-items: flex-start; gap: 0.75rem; }
+.pw-step-number {
+  flex-shrink: 0;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--pw-primary-light);
+  color: var(--pw-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.95rem;
+}
+.pw-step-title { font-weight: 600; font-size: 0.95rem; }
+.pw-step-text { color: var(--pw-text-muted); font-size: 0.85rem; }
+
+/* ---------- Empty states ---------- */
+.pw-empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--pw-text-muted);
+}
+
+/* ---------- Footer ---------- */
+.pw-footer {
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--pw-border);
+  margin-top: 3rem;
+}
+.pw-footer-brand { font-weight: 700; color: var(--pw-text); font-size: 0.95rem; }
+.pw-footer-disclaimer { color: #9aa4b2; font-size: 0.8rem; margin-top: 0.35rem; }
