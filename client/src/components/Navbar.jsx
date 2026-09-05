@@ -22,7 +22,13 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="pwNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item"><Link className="nav-link" to="/explore">Explore Programs</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/explore">Explore Programs</Link></li>
+            {!user && (
+              <>
+                <li className="nav-item"><a className="nav-link" href="/#about">About</a></li>
+                <li className="nav-item"><a className="nav-link" href="/#faq">FAQ</a></li>
+              </>
+            )}
             {user && user.role === 'student' && (
               <>
                 <li className="nav-item"><Link className="nav-link" to="/dashboard">Dashboard</Link></li>
