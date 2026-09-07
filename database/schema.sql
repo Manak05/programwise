@@ -1,9 +1,4 @@
--- ============================================================
--- ProgramWise Database Schema
--- Independent demo project inspired by the general problem of
--- comparing online education programs. NOT affiliated with,
--- and does not use any proprietary data/branding from, GradRight.
--- ============================================================
+
 
 DROP DATABASE IF EXISTS programwise;
 CREATE DATABASE programwise;

@@ -52,8 +52,8 @@ export default function Login() {
 
         <div className="text-center my-3 text-muted small">Quick demo access</div>
         <div className="d-flex gap-2 mb-3">
-          <button className="btn btn-outline-secondary btn-sm w-50" onClick={() => fillDemo('student')}>Fill Student Demo</button>
-          <button className="btn btn-outline-secondary btn-sm w-50" onClick={() => fillDemo('admin')}>Fill Admin Demo</button>
+          <button className="btn btn-outline-secondary btn-sm w-50" onClick={() => fillDemo('student')}></button>
+          <button className="btn btn-outline-secondary btn-sm w-50" onClick={() => fillDemo('admin')}></button>
         </div>
 
         <div className="text-center small">
